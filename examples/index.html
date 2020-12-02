@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detect dark mode</title>
+    <script src="../dist/umd/index.js"></script>
+    <style>
+        :root {
+            --bgc: #fff;
+            --tc: #000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            /* 操作系统及浏览器支持且用户开启了 Dark Mode */
+            :root {
+                --bgc: #000;
+                --tc: #fff;
+            }
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 操作系统及浏览器未支持或用户未开启 Dark Mode */
+        body {
+            background-color: var(--bgc);
+            color: var(--tc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>YOUR THEME IS <span id="isDark">...</span></h1>
+    <script>
+        const ele = document.querySelector('#isDark');
+        if (ele instanceof HTMLElement) {
+            const update = (isDark) => {
+                ele.innerText = isDark ? 'DARK' : 'LIGHT';
+            };
+            DetectDarkMode.onChange = (isDark) => {
+                update(isDark);
+            };
+            DetectDarkMode.listenChange();
+            update(DetectDarkMode.isDark)
+        }
+    </script>
+</body>
+
+</html>

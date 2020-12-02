@@ -4,7 +4,7 @@
   "description": "detects if the user is using a black theme in the browser.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config rollup.config.js"
   },
   "keywords": [
     "dark mode detect",
@@ -12,9 +12,9 @@
   ],
   "author": "huange",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.0.0",
+    "rollup": "^2.34.0",
     "tslib": "^2.0.3",
     "typescript": "^4.1.2"
   }
