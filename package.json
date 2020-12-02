@@ -1,6 +1,6 @@
 {
   "name": "detect-dark-mode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "detects if the user is using a black theme in the browser.",
   "main": "dist/index.js",
   "scripts": {
