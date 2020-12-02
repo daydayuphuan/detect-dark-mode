@@ -59,7 +59,7 @@ class DetectDarkMode {
    * @date 2020-12-02
    * @static
    */
-  public static _listenChange() {
+  public static listenChange() {
     const media = this._media;
     if (media && typeof media.addEventListener === 'function') {
       const listener = (ev: MediaQueryListEvent) => {

@@ -58,7 +58,7 @@ var DetectDarkMode = /** @class */ (function () {
      * @date 2020-12-02
      * @static
      */
-    DetectDarkMode._listenChange = function () {
+    DetectDarkMode.listenChange = function () {
         var _this = this;
         var media = this._media;
         if (media && typeof media.addEventListener === 'function') {
