@@ -1,5 +1,9 @@
 # detect-dark-mode
 
+## example
+
+[detect dark mode example](https://daydayuphuan.github.io/detect-dark-mode/examples/)
+
 ## use
 
 ```js
