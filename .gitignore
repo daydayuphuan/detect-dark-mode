@@ -1,0 +1,9 @@
+# Mac OS
+.DS_Store
+
+# NPM
+/node_modules
+*-lock.json
+
+
+
